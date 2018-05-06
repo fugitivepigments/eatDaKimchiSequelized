@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row justify-content-around">
+  <h2 class="notGobbled">Kimchi's that are not yet gobbled.</h2>
+    <div class="col">
+      <ul class="notGobbled">
+        {{#each kimchis}}
+          {{#unless gobbled}}
+            {{> kimchis/kimchi-block gobbled=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+
+      <div class="text-center">
+        <img src="../assets/img/Modelsheet_kimchi.png" alt="cute kimchi jar"></img>
+      </div>
+
+      <div class="col">
+        <h2 class="gobbledUp">Kimchi's that have been gobbled!</h2>
+        <ul class="gobbledUp">
+          {{#each kimchis}}
+            {{#if gobbled}}
+              {{> kimchis/kimchi-block gobbled=false}}
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Add a Kimchi</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Kimchi Name:</label>
+    <input type="text" id="ca" name="kimchi_name">
+  </div>
+
+  <div class="form-group">
+    <label for="gobbled">Gobbled?</label><br>
+    <input type="radio" name="gobbled" value="1" checked> Gobbled!<br>
+    <input type="radio" name="gobbled" value="0"> Ungobbled!
+  </div>
+  <div class="text-center">
+    <p>Click the inevitable flatulence to add your Kimchi!</p>
+    <button type="submit"><img src="../../assets/img/ChowKimchi.png" alt="fart cloud with eyes"></img></button>
+  </div>
+</form>

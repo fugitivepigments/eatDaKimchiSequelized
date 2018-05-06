@@ -1,0 +1,54 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+h1, h2, h3, p {
+  text-align: center;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  ...
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  ...
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  ...
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  ...
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .bigImg-1, .bigImg-2, .bigImg-3, .bigImg-4 {
+        background-attachment: scroll;
+    }
+}
